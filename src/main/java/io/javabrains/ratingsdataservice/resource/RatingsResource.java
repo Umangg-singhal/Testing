@@ -19,6 +19,7 @@ public class RatingsResource {
     public UserRating getUserRatings(@PathVariable("userId") String userId) {
         UserRating userRating = new UserRating();
         userRating.initData(userId);
+        System.out.println("Hello I have changed this");
         return userRating;
 
     }
@@ -32,6 +33,7 @@ public class RatingsResource {
 public class RatingsResource {
 @RequestMapping("/{movieId}")
     public Rating getRating(@PathVariable("movieId") String  movieId){
+    
     return new Rating(movieId,4);
 }
 @RequestMapping("users/{userId}")
